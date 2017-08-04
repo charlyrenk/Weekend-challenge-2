@@ -10,8 +10,8 @@ $(document).ready(function () {
             url: '/calc',
             // data becomes req.body
             data: {
-                numberX: numberX,
-                numberY: numberY,
+                x: numberX,
+                y: numberY,
             },
             success: function (response) {
                 console.log(response);
