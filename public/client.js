@@ -1,6 +1,8 @@
 $(document).ready(function () {
     console.log('Jquery is sourced')
+    
     $('#addButton').on('click', function () {
+        getResult();
         console.log('add button was clicked')
         var numberX = $("#numberX").val();
         var numberY = $("#numberY").val();
@@ -16,7 +18,19 @@ $(document).ready(function () {
             },
             success: function (response) {
                 console.log(response);
+                $('#result').append('<div>' + response + '</div>');
             }
         })
     })
+    // function getResult() {
+    //     $.ajax({
+    //         method: 'GET',
+    //         url: '/calc',
+    //         success: 
+    //         function (response) {
+    //             $('#result').empty();
+    //             $('#result').append('<div>' + response + '</div>');
+    //         }
+    //     })
+    // }
 })
