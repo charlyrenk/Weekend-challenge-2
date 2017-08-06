@@ -12,6 +12,7 @@ $(document).ready(function () {
             data: {
                 x: numberX,
                 y: numberY,
+                type: type
             },
             success: function (response) {
                 console.log(response);
