@@ -80,19 +80,12 @@ $(document).ready(function () {
             },
             success: function (response) {
                 console.log(response);
-                $('#result').append('<div>' + response + '</div>');
+                $('#result').append('<div class = "response">' + response + '</div>');
             }
         })
     })
-    // function getResult() {
-    //     $.ajax({
-    //         method: 'GET',
-    //         url: '/calc',
-    //         success: 
-    //         function (response) {
-    //             $('#result').empty();
-    //             $('#result').append('<div>' + response + '</div>');
-    //         }
-    //     })
-    // }
+    $('#clearButton').on('click', function (){
+        location.reload()
+    })
+
 })

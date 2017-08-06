@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 app.post('/calc', function (req, res) {
     console.log('message post was hit!')
     console.log(req.body.type)
-    // send back calculated functions (req.body);  
+    // send back calculated ojbect (req.body);  
     var x = parseInt(req.body.x);
     var y = parseInt(req.body.y);
     var type = req.body.type;
@@ -34,30 +34,11 @@ app.post('/calc', function (req, res) {
         res.send(x / y + "")
     }
 
-    // calcObject (req.body);
-    
-    // res.send(x + y);
 });
 
-// app.get('/calc', function (req, res) {
-//     res.send(amount);
-// });
+
 
 app.listen(port, function () {
     console.log('listening on port', port);
 });
 
-// function calcObject() {
-//     if (type = "Add"){
-//         res.send (x + y)
-//     }
-//     if (type = "Subtract"){
-//         res.send (x - y)
-//     }
-//     if (type = "Multiply"){
-//         res.send (x * y)
-//     }
-//     if (type = "Divide"){
-//         res.send (x / y)
-//     }
-// }
